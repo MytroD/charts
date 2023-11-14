@@ -1,6 +1,6 @@
 appName: mytro-tech
-deploymentName: default
-namespace: default
+deploymentName: mytro-tech-deployment
+
 
 configmap:
   name: mytro-tech-helm-v0.1
@@ -10,5 +10,4 @@ configmap:
 image:
   name: mytrod/mytro-tech
   tag: latest
-imagePullSecrets:
-  - name: mytro-tech-docker-hub
+  pullsecret: mytro-tech-docker-hub
