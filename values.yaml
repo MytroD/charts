@@ -1,0 +1,12 @@
+appName: mytro-tech
+deploymentName: default
+namespace: default
+
+configmap:
+  name: mytro-tech-helm-v0.1
+  data:
+    CUSTOM_HEADER: 'Hello world'
+
+image:
+  name: mytrod/mytro-tech
+  tag: latest
