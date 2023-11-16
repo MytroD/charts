@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  helm-mytro-tech:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-11-16T10:02:41.42088055Z"
+    description: A Helm chart for Kubernetes deployment of mytro.tech
+    digest: 659306a2b54fa504c04a4d2c1e65a71cb1fea535512f7d23f7137be51c93d9b9
+    name: helm-mytro-tech
+    type: application
+    urls:
+    - https://github.com/MytroD/helm-charts/releases/download/helm-mytro-tech-0.1.0/helm-mytro-tech-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-11-16T10:02:41.420891921Z"
