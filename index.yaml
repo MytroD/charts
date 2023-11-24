@@ -11,4 +11,15 @@ entries:
     urls:
     - https://github.com/MytroD/helm-charts/releases/download/helm-mytro-tech-0.1.0/helm-mytro-tech-0.1.0.tgz
     version: 0.1.0
-generated: "2023-11-16T10:02:41.420891921Z"
+  owncloud:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-11-24T11:49:31.73753539Z"
+    description: A Helm chart for Kubernetes
+    digest: 1b23f76283840976a46713c16eb59bf4dc90d07ddfe71ec058cab98139387069
+    name: owncloud
+    type: application
+    urls:
+    - https://github.com/MytroD/helm-charts/releases/download/owncloud-0.1.0/owncloud-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-11-24T11:49:31.73754634Z"
