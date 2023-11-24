@@ -1,36 +1,52 @@
-#to be Done 
+# Helm Charts by djjudas21
 
+Welcome to the documentation for the [djjudas21 Helm charts](https://github.com/djjudas21/charts) project.
 
-# Create the helmchart
-```
-helm create webapp1
-```
+Some of these charts are my own creation, while others were adopted after the
+[k8s-at-home charts project was deprecated](https://github.com/k8s-at-home/charts/issues/1761).
 
+I use these charts in my own cluster. I subscribe to notifications for when the upstream apps 
+are updated, and I update the charts when there are upstream releases.
 
-# Follow along with the video
-- Create the files per the video, copying and pasting from templates-original
-- you can also use the files in the solution folder
+Contributions are always welcome, either for new features, bug fixes, or if I've missed a update.
 
-# Install the first one
-```
-helm install mywebapp-release webapp1/ --values mywebapp/values.yaml
-```
+## Getting started
 
-# Upgrade after templating
-```
-helm upgrade mywebapp-release webapp1/ --values mywebapp/values.yaml
-```
+[Helm](https://helm.sh) must be installed to use the charts in this repository.
 
-# Accessing it
-```
-minikube tunnel
+Refer to Helm's [documentation](https://helm.sh/docs/) to get started.
+
+## Installation
+
+```console
+helm repo add djjudas21 https://djjudas21.github.io/charts/
+helm repo update djjudas21
 ```
 
-# Create dev/prod
+You can then run `helm search repo djjudas21` to search the charts.
+
+## Updating
+
+I recommend you subscribe to release notifications so you know when there are chart updates.
+
+1. Click the arrow next to the **Watch** button in the top-right corner of the Github project
+2. Click **Custom**
+3. Tick **Releases**
+4. Click **Apply**
+
+There's also a great tool called [`nova`](https://github.com/FairwindsOps/nova) which
+can check your installed charts for available updates.
+
+```console
+nova find --format table --show-old
 ```
-k create namespace dev
-k create namespace prod
-helm install mywebapp-release-dev webapp1/ --values webapp1/values.yaml -f webapp1/values-dev.yaml -n dev
-helm install mywebapp-release-prod webapp1/ --values webapp1/values.yaml -f webapp1/values-prod.yaml -n prod
-helm ls --all-namespaces
-```
+
+## Contributing
+
+To contribute code, fork this repo, submit a PR, and make sure the CI tests are passing.
+
+I get through a lot of caffeine writing code. If my work is useful to you, please [buy me a coffee](https://www.buymeacoffee.com/jgazeley).
+
+## License
+
+This project is licensed under the terms of the Apache 2.0 License license.
